@@ -66,10 +66,12 @@ public class Server {
 				properties = line.split(":", 2);
 				
 				switch (properties[0]) {
+				// On récupère le port
 				case "PORT" : 
 					PORT = Integer.parseInt(properties[1].replaceFirst(" ", ""));
 					break;
 
+				// On récupère le dossier web où mettre les sites
 				case "Web" :
 					webFolder = properties[1].replaceFirst(" ", "");
 					break;

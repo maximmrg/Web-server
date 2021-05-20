@@ -61,9 +61,12 @@ public class Request implements Runnable{
         String request = requestBuilder.toString();
         String[] requestsLines = request.split("\r\n");
         String[] requestLine = requestsLines[0].split(" ");
+        // La méthode (GET, POST, etc...)
         String method = requestLine[0];
+        // Le chemin vers le fichier demandé
         String path = requestLine[1];
         String version = requestLine[2];
+        // Le client qui se connecte au serveur
         String host = requestsLines[1].split(" ")[1];
         
         String[] splitDomain = host.split("\\.");

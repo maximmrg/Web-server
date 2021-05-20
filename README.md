@@ -1,4 +1,4 @@
-# Serveur-Web-Reseaux
+# Web-server
 
 ## Lancer le serveur
 Pour lancer le serveur,  il faut lancer le .bat qui se situe dans target/appassembler/bin
@@ -26,6 +26,10 @@ Une fois le chemin construit, on vérifie si le fichier en question existe. S'il
 
 Si la méthode n'est pas une méthode GET, on ne la gère pas.
 
+## Fichier web
+Tous les fichiers web (index.html, etc...) doivent être placés dans le dossier web spécifié dans properties.txt
+Si vous utilisez un domaine, le site doit être placé dans un dossier suivant ce modèle de chemin : tld/domaine/sous-domaine.
+
 ## Format de la requête
 Pour que la reqête fonctionne, elle doit obligatoirement finir par un "/"
 Si elle fini par un "/", on va alors rajouter "index.html" au chemin vers le fichier pour afficher la page de base
@@ -39,9 +43,10 @@ Mais si l'utilisateur rentre : localhost:80/verti, cela ne marchera pas
 ## Fonctionnalités non-implémentées
 La protection d'une ressource par une authentification basique n'a pas été implémentée.
 Aucune fonctionnalité bonus n'a été implémentée.
+L'erreur 400 n'est pas gérée
 
 ## Bug commum
 Il est possible que vous ayez cette erreur : java.net.BindException: Address already in use: bind
 Cela signifie que le serveur est déjà lancé et qu'il écoute déjà sur cette adresse. Vous devez donc fermer la connection déjà ouverte sur ce port
-# Web-server
-# Web-server
+
+

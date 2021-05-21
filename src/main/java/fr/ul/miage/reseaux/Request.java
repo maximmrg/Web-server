@@ -77,12 +77,13 @@ public class Request implements Runnable{
 		String subDomaine = "";
 		String domainPath = "";
 
-		//On récupère le chemin du domaine
+		//On récupère le domaine et on crée le chemin pour y accéder à partir du tld, du domaine et du sous-domaine.
 		if(splitDomain.length == 3) {
 			subDomaine = splitDomain[0];
 			domaine = splitDomain[1];
 			tld = splitDomain[2];
 
+			//Si la fin du tld contient ":" (pour le port), on ne récupère que la première partie.
 			if(tld.contains(":")) {
 				tld = tld.split(":")[0];
 			}
@@ -127,6 +128,7 @@ public class Request implements Runnable{
 				//On envoi le fichier au client
 				sendResponse(socket, "200", contentType, Files.readAllBytes(filePath));
 			} else {
+				//On récupère le fichier 404.html et on l'affiche
 				try {
 					File file = new File(webFolder.concat("/404.html"));
 

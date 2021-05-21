@@ -7,7 +7,7 @@ Il faut lui passer en paramètre le chemin vers le fichier properties (détail c
 ## Fonctionnement
 L'emplacement du fichier properties doit être spécifié en paramètre du .bat.  
 
-![image](https://user-images.githubusercontent.com/60175680/119116575-a8e57400-ba28-11eb-9a5a-65c877ccc999.png)
+![image](https://user-images.githubusercontent.com/60175680/119159152-448dd900-ba57-11eb-9f1a-2af7725bd0c3.png)
 
 Il contient les lignes suivantes :  
 

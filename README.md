@@ -1,5 +1,8 @@
 # Web-server
 
+## Prérequis
+Le programme a été compilé en Java 8
+
 ## Lancer le serveur
 Pour lancer le serveur,  il faut lancer le .bat qui se situe dans target/appassembler/bin.  
 Il faut lui passer en paramètre le chemin vers le fichier properties (détail ci-dessous).  

@@ -42,7 +42,7 @@ public class Request implements Runnable{
 		try {
 			traitementRequete();
 		} catch (Exception e) {
-			System.out.println(e);
+			//System.out.println(e);
 		}
 	}
 

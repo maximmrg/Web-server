@@ -37,7 +37,7 @@ Une fois le chemin construit, on vérifie si le fichier en question existe. S'il
 Si la méthode n'est pas une méthode GET, on ne la gère pas.
 
 ## Fichier web
-Tous les fichiers web (index.html, etc...) doivent être placés dans le dossier web spécifié dans properties.txt
+Tous les fichiers web (index.html, 404.html, etc...) doivent être placés dans le dossier web spécifié dans properties.txt
 Si vous utilisez un domaine, le site doit être placé dans un dossier suivant ce modèle de chemin : tld/domaine/sous-domaine.
 
 ## Format de la requête

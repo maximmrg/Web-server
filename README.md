@@ -32,9 +32,14 @@ On récupère la méthode, pour s'assurer que c'est bien un GET.
 On récupère la requête, c'est à dire la page web demandée par le client
 On récupère l'host, c'est à dire le domaine.
 
-On va ensuite parser le domaine pour connaitre le sous-domaine, le nom du domaine et le tld.
-Pour cela, on parse le host à chaque point et on récupère chaque élément.
-On va ensuite reconstruire le chemin vers le fichier avec ces éléments.
+On va ensuite parser le domaine pour connaitre le sous-domaine, le nom du domaine et le tld.  
+Pour cela, on parse le host à chaque point et on récupère chaque élément.  
+On va ensuite reconstruire le chemin vers le fichier avec ces éléments.  
+
+Par exemple : si le domaine est www.mondomaine.com, le chemin vers le fichier sera com/mondomaine/www  
+Donc www.mondomaine.com/index.html se situera à com/mondomaine/www/index.html
+
+Les domaines peuvent être spécifiés dans le fichier etc/hosts sur windows (c'est de cette manière que le multisite a été testé).
 
 Une fois le chemin construit, on vérifie si le fichier en question existe. S'il n'existe pas, on renvoi une erreur 404.
 

@@ -4,8 +4,18 @@
 Pour lancer le serveur,  il faut lancer le .bat qui se situe dans target/appassembler/bin
 
 ## Fonctionnement
+L'emplacement du fichier properties doit être spécifié en paramètre du .bat.
+
+![image](https://user-images.githubusercontent.com/60175680/119116575-a8e57400-ba28-11eb-9a5a-65c877ccc999.png)
+
+Il contient les lignes suivantes : 
+
+![image](https://user-images.githubusercontent.com/60175680/119116679-c31f5200-ba28-11eb-95b4-d9713f87a7dd.png)
+
 Le programme va d'abord lire le contenu du fichier properties.txt
 Dedans, vous pouvez renseigner le répertoire racine où mettre les sites web et le port d'écoute du serveur.
+
+Si le fichier contient des erreurs, le port par défaut est 80 et le chemin du dossier web par défaut est : "C:/WebRoot".
 
 Le serveur va ensuite écouter sur le PORT défini (80 par défaut) et attendre qu'il y ait une connection.
 Dès qu'un nouveau client est connecté, on l'affiche.
@@ -27,7 +37,7 @@ Une fois le chemin construit, on vérifie si le fichier en question existe. S'il
 Si la méthode n'est pas une méthode GET, on ne la gère pas.
 
 ## Fichier web
-Tous les fichiers web (index.html, etc...) doivent être placés dans le dossier web spécifié dans properties.txt
+Tous les fichiers web (index.html, 404.html, etc...) doivent être placés dans le dossier web spécifié dans properties.txt
 Si vous utilisez un domaine, le site doit être placé dans un dossier suivant ce modèle de chemin : tld/domaine/sous-domaine.
 
 ## Format de la requête
@@ -48,7 +58,7 @@ Aucune fonctionnalité bonus n'a été implémentée.
 L'erreur 400 n'est pas gérée
 
 ## Bug courant
-Il est possible que vous ayez cette erreur : java.net.BindException: Address already in use: bind
+Il est possible que vous ayez cette erreur : java.net.BindException: Address already in use: bind  
 Cela signifie que le serveur est déjà lancé et qu'il écoute déjà sur cette adresse. Vous devez donc fermer la connection déjà ouverte sur ce port
 
 

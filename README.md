@@ -2,7 +2,7 @@
 
 ## Lancer le serveur
 Pour lancer le serveur,  il faut lancer le .bat qui se situe dans target/appassembler/bin.  
-Il faut lui passer en paramètre le chemin vers le fichier properties (détail ci-dessous).
+Il faut lui passer en paramètre le chemin vers le fichier properties (détail ci-dessous).  
 Pour stopper le programme, vous devez faire ctrl+c dans le terminal.
 
 ## Fonctionnement

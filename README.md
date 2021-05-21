@@ -35,8 +35,10 @@ Pour que la reqête fonctionne, elle doit obligatoirement finir par un "/"
 Si elle fini par un "/", on va alors rajouter "index.html" au chemin vers le fichier pour afficher la page de base
 
 L'utilisateur peut aussi préciser lui-même qu'il souhaite récupérer ce fichier en l'indiquant dans la requête.
+
 Par exemple : 
-  localhost:80/verti/index.thml et localhost:80/verti/ afficheront tous les deux la page index.html du site verti
+
+  localhost:80/verti/index.html et localhost:80/verti/ afficheront tous les deux la page index.html du site verti
 
 Mais si l'utilisateur rentre : localhost:80/verti, cela ne marchera pas
 

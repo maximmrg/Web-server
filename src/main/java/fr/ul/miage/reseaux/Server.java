@@ -10,13 +10,20 @@ import java.net.Socket;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Paths;
 import java.util.Scanner;
 import java.util.stream.Stream;
 
 public class Server {
 
 	static int PORT = 80;
-	static String webFolder;
+	static String webFolder = "C:\\WebRoot";
+	String PROPERTIES_PATH;
+
+	public Server(String pROPERTIES_PATH) {
+		super();
+		PROPERTIES_PATH = pROPERTIES_PATH;
+	}
 
 	public void runServer(){
 
@@ -53,17 +60,15 @@ public class Server {
 
 	//On lit les propriétes du fichier properties
 	public void readProperties () {
+		
 		try {
-
-			InputStream is = getClass().getResourceAsStream("/properties.txt");
-			InputStreamReader steamReader = new InputStreamReader(is);
-			BufferedReader br = new BufferedReader(steamReader);
-
-			String line;
+			File obj = new File(PROPERTIES_PATH);
+			Scanner myReader = new Scanner(obj);
+			
 			String[] properties;
-
-			while ((line = br.readLine()) != null) {
-				properties = line.split(":", 2);
+		      while (myReader.hasNextLine()) {
+		        String data = myReader.nextLine();
+		        properties = data.split(":", 2);
 				
 				switch (properties[0]) {
 				// On récupère le port
@@ -72,17 +77,14 @@ public class Server {
 					break;
 
 				// On récupère le dossier web où mettre les sites
-				case "Web" :
+				case "WebRoot" :
 					webFolder = properties[1].replaceFirst(" ", "");
 					break;
 				}
-			}
-
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
+		      }
+		      myReader.close();
+		} catch (Exception e) {
+			// TODO: handle exception
 			e.printStackTrace();
 		}
 

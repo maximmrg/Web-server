@@ -4,8 +4,18 @@
 Pour lancer le serveur,  il faut lancer le .bat qui se situe dans target/appassembler/bin
 
 ## Fonctionnement
+L'emplacement du fichier properties doit être spécifié en paramètre du .bat.
+
+![image](https://user-images.githubusercontent.com/60175680/119116575-a8e57400-ba28-11eb-9a5a-65c877ccc999.png)
+
+Il contient les lignes suivantes : 
+
+![image](https://user-images.githubusercontent.com/60175680/119116679-c31f5200-ba28-11eb-95b4-d9713f87a7dd.png)
+
 Le programme va d'abord lire le contenu du fichier properties.txt
 Dedans, vous pouvez renseigner le répertoire racine où mettre les sites web et le port d'écoute du serveur.
+
+Si le fichier contient des erreurs, le port par défaut est 80 et le chemin du dossier web par défaut est : "C:/WebRoot".
 
 Le serveur va ensuite écouter sur le PORT défini (80 par défaut) et attendre qu'il y ait une connection.
 Dès qu'un nouveau client est connecté, on l'affiche.

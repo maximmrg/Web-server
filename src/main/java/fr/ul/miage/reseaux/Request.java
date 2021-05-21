@@ -56,7 +56,7 @@ public class Request implements Runnable{
 
 		StringBuilder requestBuilder = new StringBuilder();
 		String line;
-		while (!(line = br.readLine()).isBlank()) {
+		while (!(line = br.readLine()).isEmpty()) {
 			requestBuilder.append(line + "\r\n");
 		}
 
@@ -98,8 +98,8 @@ public class Request implements Runnable{
 		String fichierRequete = path;
 
 		System.out.println();
-		System.out.println("méthode : " + method);
-		System.out.println("host : " + host);
+		System.out.println("Methode : " + method);
+		System.out.println("Host : " + host);
 		System.out.println("Ip de l'appelant : " + socket.getRemoteSocketAddress());
 
 		//On regarde si c'est une méthode GET
@@ -151,7 +151,7 @@ public class Request implements Runnable{
 			}
 		} else {
 			//Si la méthode n'est pas une méthode GET, on ne fait rien
-			System.out.println("méthode non traitée -> ignorée");
+			System.out.println("Methode non traitée -> ignoree");
 		}
 
 		// Ferme la connexion et la socket.

@@ -19,7 +19,7 @@ public class main {
 				PROPERTIES_PATH = args[1];
 				correctArgs = true;
 			} else {
-				System.err.println("Le paramètre est incorrecte, il doit être : --properties [Path]");
+				System.err.println("Le parametre est incorrecte, il doit être : --properties [Path]");
 			}
 		}
 

@@ -32,7 +32,7 @@ public class Server {
 		// On commence par créer une socket sur le port d'écoute défini dans le fichier properties
 		try {
 			ServerSocket serverSocket = new ServerSocket(PORT);
-			System.out.println("écoute sur le port " + PORT + "...\n");
+			System.out.println("Ecoute sur le port " + PORT + "...\n");
 
 			/*
 			 * On crée une socket pour chaque nouveau client
@@ -41,7 +41,7 @@ public class Server {
 			while(true) {
 				Socket clientSocket = serverSocket.accept();
 
-				System.out.println("nouveau client connecté : " + clientSocket.getInetAddress().getHostAddress());
+				System.out.println("nouveau client connecte : " + clientSocket.getInetAddress().getHostAddress());
 
 				Request request = new Request(clientSocket, webFolder);
 
@@ -85,10 +85,9 @@ public class Server {
 		      myReader.close();
 		} catch (Exception e) {
 			// TODO: handle exception
-			e.printStackTrace();
+			System.err.println("Erreur lors de la lecture du fichier, les paramètre sont définis par défaut");
+			//e.printStackTrace();
 		}
-
-
 	}
 }
 
